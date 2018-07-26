@@ -1,0 +1,6 @@
+mapwrite <- function(df, dfname){
+  map2(df, names(df), 
+       ~write.xlsx(.x, file = dfname, 
+                   sheetName = .y, append = TRUE)
+  )
+}
