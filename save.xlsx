@@ -1,3 +1,5 @@
+#same as mapwrite but longer
+
 save.xlsx <- function (file, ...)
 {
   objects <- list(...)
