@@ -1,6 +1,8 @@
+#writes list of dataframes into sheets in one single xlsx file
+
 mapwrite <- function(df, dfname){
-  map2(df, names(df), 
+  map2(df, names(df), #df equals .x in write.xlsx and names(df) equals .y
        ~write.xlsx(.x, file = dfname, 
                    sheetName = .y, append = TRUE)
-  )
+      )
 }
