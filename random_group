@@ -1,0 +1,6 @@
+Random_Group <- function(d){
+  grp_sz <- ceiling(nrow(d)/3)
+  grp <- rep(c("A", "B", "C"), grp_sz)
+  d$Group <-  sample(grp, nrow(d), replace = F)
+  d
+}
